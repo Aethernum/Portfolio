@@ -152,10 +152,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		const project = projectsData[id];
 
 		technoList.innerHTML = null;
-		if(project.name == "My portfolio")
+		if(project.name == "My portfolio"){
 			name.innerHTML = project.name;
-		else
+			name.href = "";
+			name.target="_self";
+		}
+		else{
 			name.innerHTML = project.name+' <i class="fas fa-download"></i>';
+			name.href = project.url;
+			name.target="_blank";
+		}
 		subname.innerText = project.subname;
 		description.innerHTML = project.description;
 

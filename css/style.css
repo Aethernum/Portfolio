@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
 /* 1200px / 16px = 75em */
@@ -32,7 +33,7 @@ body {
   margin-top: 0;
   margin-left: 0;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 
@@ -55,9 +56,57 @@ a {
   box-shadow: 8px 15px 20px rgba(0, 0, 0, 0.19), 4px 6px 10px rgba(0, 0, 0, 0.23);
 }
 
+
+
+
+
+.background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 50px;
+  background-color: white;
+  transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
+}
+
+/* Set stacking context of slides */
+.background:nth-child(1) {
+  z-index: 5;
+}
+
+.background:nth-child(2) {
+  z-index: 4;
+  background-image: url(../picture/about.png);
+}
+
+.background:nth-child(3) {
+  z-index: 3;
+  background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+}
+
+.content-title {
+  font-size: 12vh;
+  line-height: 1.4;
+}
+
+.up-scroll {
+  transform: translate(0, 0);
+}
+.down-scroll {
+  transform: translate(0, -100vh);
+}
+
 /************ CSS HEADER *************/
-  header {
-    background: #333;
+header {
+    background: #082146;
     width: 100%;
     position: fixed;
     z-index: 10;
@@ -99,7 +148,9 @@ a {
     margin: 0;
     float: left;
   }
-
+  .icon_title{
+    padding-left: 10px;
+  }
   header .container #nav {
     float: right;
     margin-top: 5px;
@@ -109,16 +160,16 @@ a {
     cursor: pointer;
   }
 
+
 /************ CSS ACCUEIL **************/
-  #intro {
+#intro {
     height: 100%;
     width: 100%;
     padding-top: 45vh;
   }
 
   #showcase {
-    height: 100vh;
-    min-height: 100vh;
+    height: inherit;
     color: #fcfffe;
     padding: 0;
     margin-bottom: 0px;
@@ -133,16 +184,18 @@ a {
     position: fixed;
   } 
 
+  
 /******** CSS ABOUT *********/
-  #about {
+
+#about {
     padding: 10px;
     font-size: 1.1em;
-    background: #fcfffe;
     position: relative;
+    height: inherit;
   }
 
-  h1 {
-    margin-top: 50px;
+#about h1 {
+    margin-top: 25px;
     text-align: center;
     font-size: 55px;
     color: #222;
@@ -150,23 +203,22 @@ a {
     margin-bottom: 50px;
   }
 
-  #about .about-text {
-    padding: 0 40px 60px 40px;
-    text-align: center;
+#about .about-text {
+    padding: 0 40px 0px 40px;
+    text-align: justify;
     color: #222;
-    width: 60%;
-    font-size: 24px;
+    font-size: 22px;
     margin: auto;
     text-shadow: 0px 5px 60px rgba(0, 0, 0, 0.19), 0px 1.5px 1.5px rgba(0, 0, 0, 0.23);
   }
 
 /**********CSS SKILLS ************/
   
-  #container_skill{
+#container_skill{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    max-width: 80%;
+    width: 90vw;
+    min-width: 1400px;
     margin: auto;
   }
   .skill-card {
@@ -270,119 +322,235 @@ a {
   #Header_MSql{
     background-color: #333;
   }
-/*********** CSS Project ************/
- 
+
+
+
+
+
+  /*********** CSS Project ************/
+   
+#projects {
+    position: relative;
+    height: inherit;
+    width: inherit;
+    
+  }
+  #projects h1 {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 55px;
+    color: #222;
+    text-shadow: 8px 15px 20px rgba(0, 0, 0, 0.19), 4px 6px 10px rgba(0, 0, 0, 0.23);
+    margin-bottom: 50px;
+  }
+  #projects #project-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.4s ease;
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+  }
   
-/* Projects section */
-
-.projects-section {
-  text-align: center;
-  padding: 10px 50px;
-  font-size: 1.1em;
-  background: #fcfffe;
-  position: relative;
-}
-
-
-.projects-section-header {
-  margin-bottom: 100px;
-}
-
-@media (max-width: 28.75em) {
-  .projects-section-header {
-    font-size: 4rem;
+  #projects .subtitle{
+    margin-left: 5vw;
   }
-}
-
-/* "Automagic" image grid using no media queries */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 4rem;
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  margin-bottom: 6rem;
-}
-
-@media (max-width: 30.625em) {
-  .projects-section {
-    padding: 6rem 1rem;
+  
+  .scrolling-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    scrollbar-width: none;
+    height: 40%;
+  }
+  
+  .scrolling-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .card {
+    flex: 0 0 auto;
+    width: 20%;
+    max-width: 325px;
+    min-width: 250px;
+    height: 95%;
+    min-height: 275px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0 9px 9px rgba(0, 0, 0);
+    transition: all 0.4s ease;
+  }
+  .card:hover {
+    cursor: pointer;
+    box-shadow:  10px 10px 10px rgb(21, 154, 187);
+  }
+  .card.selected {
+    box-shadow:  10px 10px 15px rgb(21, 154, 187);
+  }
+  .card.first-card {
+    margin-left: 5vw;
+  }
+  
+  #last-card {
+    flex: 0 0 auto;
+    width: 5vw;
+    height: 300px;
+    background-color: transparent;
+  }
+  
+  #moonstone {
+    background: url("../picture/Moonstone.png");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #gladiaball {
+    background: url("../picture/Gladiaball.png");
+    background-size: cover;
+    background-position: right;
+  }
+  
+  #blowbug {
+    background: url("../picture/BlowTheBug.png");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #portfolio {
+    background: url("../picture/moi03.png");
+    background-size: 110%;
+    background-position: top;
+  }
+  
+  #purge {
+    background: url("../picture/Purge.png");
+    background-size: cover;
+    background-position: center;
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr;
+  #CHANGE {
+    background: url("../picture/CHANGE.png");
+    background-size: cover;
+    background-position: center;
   }
-}
+  #project-details {
+    max-width: 1000px;
+    margin: 20px 60px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+  }
+  #project-details #project-name a{
+    color: #222;;
+    font-size: 35px;
+  }
+  #project-details #project-subname {
+    font-style: italic;
+    font-size: 16px;
+  }
+  #project-details #project-description {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px;
+  }
+  #project-details #project-description #battle-drive-link {
+    font-weight: bold;
+    transition: all 0.4s ease;
+  }
+  #project-details #project-description #battle-drive-link:hover {
+    color: skyblue;;
+  }
+  #project-details #technos, #project-details #images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #project-details #technos::after, #project-details #technos::before {
+    content: "";
+    width: 100px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #52e0c0;
+  }
+  #project-details ul#technos-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px 15px;
+  }
+  #project-details ul#technos-list li {
+    background-color:#333;
+    color: ghostwhite;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  #project-details #images #images-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #project-details #images #images-list img {
+    object-fit: cover;
+    width: 130px;
+    height: 130px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    margin: 10px;
+    transition: all 0.4s ease;
+  }
+  #project-details #images #images-list img:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+  }
 
-.project {
-  background-color: #303841;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  border-radius: 2px;
-}
-
-.code {
-  color: #303841;
-  transition: color 0.3s ease-out;
-}
-
-.project:hover .code {
-  color: #ff7f50;
-}
-
-.project-image {
-  height: calc(100% - 6.8rem);
-  width: 100%;
-  height: 290px;
-  object-fit: cover;
-}
-
-.project-title {
-  font-size: 20px;
-  padding: 20px 5px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 1rem 2rem;
-  border-radius: 2px;
-}
-
-.btn-show-all {
-  font-size: 2rem;
-  background-color: #303841;
-  transition: #303841 0.3s ease-out;
-}
-
-.btn-show-all:hover {
-  background-color: #be3144;
-}
-
-.btn-show-all:hover > i {
-  transform: translateX(2px);
-}
-
-.btn-show-all > i {
-  margin-left: 10px;
-  transform: translateX(0);
-  transition: transform 0.3s ease-out;
-}
 
 
+  
 /************** CSS Work Experience ***************/
-  .sectionClass {
-    padding: 80px 0px 50px 0px;
+  #parallax4{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  #education {
     position: relative;
     display: block;
     z-index: 2;
-    background: rgb(249, 249, 249);
+    height: 100%;
   }
 
-  .row {
-    width: 980px;
-    height: 100%;
-    max-width: 100%;
-    margin: 0 auto;
+
+  #education h1 {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 55px;
+    color: #222;
+    text-shadow: 8px 15px 20px rgba(0, 0, 0, 0.19), 4px 6px 10px rgba(0, 0, 0, 0.23);
+    margin-bottom: 50px;
   }
   .row:before,
   .row:after {
@@ -521,7 +689,6 @@ a {
       margin: 4px 0 0 0;
       z-index: 14;
       line-height: 1em;
-      vertical-align: middle;
       color: #fff;
   }
   
@@ -556,11 +723,12 @@ a {
       margin: 1em 1em 0 1em;
       padding: 1em;
       z-index: 15;
+    
   }
   
   @media(min-width: 768px){
       .timeline {
-          width: 660px;
+          width: 1040px;;
           margin: 0 auto;
           margin-top: 20px;
       }
@@ -586,14 +754,14 @@ a {
   
       .direction-l {
           position: relative;
-          width: 310px;
+          width: 500px;
           float: left;
           text-align: right;
       }
   
       .direction-r {
           position: relative;
-          width: 310px;
+          width: 500px;
           float: right;
           text-align: left;
       }
@@ -648,180 +816,3 @@ a {
       }
   }
     
-
-
-
-
-
-
-
-
-
-
-  
-#projects {
-  padding: 5vh 0 5vh 0;
-  position: relative;
-}
-#projects #project-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  transition: all 0.4s ease;
-  opacity: 0;
-  overflow: hidden;
-  height: 0;
-}
-
-#projects .subtitle, #projects .title {
-  margin-left: 5vw;
-}
-
-.scrolling-wrapper {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  margin-top: 20px;
-  padding-bottom: 20px;
-  scrollbar-width: none;
-}
-
-.scrolling-wrapper::-webkit-scrollbar {
-  display: none;
-}
-
-.card {
-  flex: 0 0 auto;
-  width: 240px;
-  height: 300px;
-  margin: 10px;
-  border-radius: 20px;
-  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.12);
-  transition: all 0.4s ease;
-}
-.card:hover {
-  cursor: pointer;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-}
-.card.selected {
-  box-shadow: 0 6px 15px lightslategrey;
-}
-.card.first-card {
-  margin-left: 5vw;
-}
-
-#last-card {
-  flex: 0 0 auto;
-  width: 5vw;
-  height: 300px;
-  background-color: transparent;
-}
-
-#moonstone {
-  background: url("../picture/Moonstone.png");
-  background-size: cover;
-  background-position: center;
-}
-
-#gladiaball {
-  background: url("../picture/Gladiaball.png");
-  background-size: cover;
-  background-position: right;
-}
-
-#blowbug {
-  background: url("../picture/BlowTheBug.png");
-  background-size: cover;
-  background-position: center;
-}
-
-#portfolio {
-  background: url("../picture/moi01.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#purge {
-  background: url("../picture/Purge.png");
-  background-size: cover;
-  background-position: center;
-}
-#project-details {
-  max-width: 1000px;
-  margin: 20px 60px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: fit-content;
-}
-#project-details #project-name {
-  color: #025be9;
-  font-size: 30px;
-}
-#project-details #project-subname {
-  font-style: italic;
-  font-size: 16px;
-}
-#project-details #project-description {
-  margin-top: 15px;
-  max-width: 800px;
-  text-align: center;
-  font-size: 18px;
-}
-#project-details #project-description #battle-drive-link {
-  font-weight: bold;
-  transition: all 0.4s ease;
-}
-#project-details #project-description #battle-drive-link:hover {
-  color: skyblue;;
-}
-#project-details #technos, #project-details #images {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-#project-details #technos::after, #project-details #technos::before {
-  content: "";
-  width: 100px;
-  height: 2px;
-  border-radius: 1px;
-  background-color: #52e0c0;
-}
-#project-details ul#technos-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 15px 15px;
-}
-#project-details ul#technos-list li {
-  background-color:#333;
-  color: ghostwhite;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 5px;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-#project-details #images #images-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-#project-details #images #images-list img {
-  object-fit: cover;
-  width: 130px;
-  height: 130px;
-  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.12);
-  border-radius: 10px;
-  margin: 10px;
-  transition: all 0.4s ease;
-}
-#project-details #images #images-list img:hover {
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-}

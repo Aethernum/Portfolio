@@ -11,7 +11,7 @@ let projectsData = {
     },
     "gladiaball": {
         "name": "Gladiaball",
-        "url": "",
+        "url": "Ressource/Gladiaball.rar",
         "subname": "University project",
         "description": "The game takes place in a mythological universe and takes up the basics of gladiatorial combat in the Roman Empire. " + 
             "The matches take place in a coliseum where the player fights against deities. " + 

@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		const project = projectsData[id];
 
 		technoList.innerHTML = null;
-		if(project.name == "My portfolio"){
+		if(project.name == "My portfolio" || project.name == "IT department"){
 			name.innerHTML = project.name;
 			name.href = "";
 			name.target="_self";

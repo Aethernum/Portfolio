@@ -11,7 +11,7 @@ let projectsData = {
     },
     "gladiaball": {
         "name": "Gladiaball",
-        "url": "Ressource/Gladiaball.rar",
+        "url": "https://mega.nz/file/1JNQFRyI#c8QfY0GVfYIBSPZ6uoY-mLszhxYGVB7tL1ijnk2qqPQ",
         "subname": "University project",
         "description": "The game takes place in a mythological universe and takes up the basics of gladiatorial combat in the Roman Empire. " + 
             "The matches take place in a coliseum where the player fights against deities. " + 
@@ -22,7 +22,7 @@ let projectsData = {
     },
     "blowbug": {
         "name": "Blow The Bug",
-        "url": "Ressource/BlowTheBug.rar",
+        "url": "https://mega.nz/file/UMdiGJzL#lNOJtTV6QUkJcFZjXWXFeVol3gS6ZGpQbA7CQjZgPno",
         "subname": "International GameJam",
         "description": "This game was created during an international GameJam between my University of Chicoutimi and the University of Grenoble." +
             "Our game was inspired by the Japanese TV game show \"cockroach game\". The goal is simple, blow as hard as you can into a pipe in order" +

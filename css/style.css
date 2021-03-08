@@ -1,26 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
-/* 1200px / 16px = 75em */
-@media (max-width: 75em) {
-  html {
-    font-size: 60%;
-  }
-}
 
-/* 980px / 16px = 61.25em */
-@media (max-width: 61.25em) {
-  html {
-    font-size: 58%;
-  }
-}
 
-/* 460px / 16px = 28.75em */
-@media (max-width: 28.75em) {
-  html {
-    font-size: 55%;
-  }
-}
 
 * {
    box-sizing: border-box;
@@ -71,7 +53,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   padding-top: 50px;
   background-color: white;
   transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
@@ -104,6 +86,10 @@ a {
   transform: translate(0, -100vh);
 }
 
+
+
+.container{
+}
 /************ CSS HEADER *************/
 header {
     background: #082146;
@@ -184,6 +170,30 @@ header {
     position: fixed;
   } 
 
+  .scroll-arrow{
+    width: 100%;
+    bottom: 25px;
+    position: absolute;
+  }
+  .arrow {
+    pointer-events: none;
+    border-color:transparent;
+    border-style:solid;
+    border-width:0 2em;
+    display:block;
+    margin: auto;
+    width: 0;
+  }
+  .down {
+    -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
+    border-top:2em solid #00b6f1;
+  }
+  @-webkit-keyframes downarrow {
+    0% { -webkit-transform: translateY(0); opacity: 0.4 }
+    100% { -webkit-transform: translateY(15px); opacity: 0.9 }
+  }
+  
+  
   
 /******** CSS ABOUT *********/
 
@@ -197,17 +207,17 @@ header {
 #about h1 {
     margin-top: 25px;
     text-align: center;
-    font-size: 55px;
+    font-size: 2em;
     color: #222;
     text-shadow: 8px 15px 20px rgba(0, 0, 0, 0.19), 4px 6px 10px rgba(0, 0, 0, 0.23);
-    margin-bottom: 50px;
+    margin-bottom: 5vh;
   }
 
 #about .about-text {
     padding: 0 40px 0px 40px;
     text-align: justify;
     color: #222;
-    font-size: 22px;
+    font-size: 2vh;
     margin: auto;
     text-shadow: 0px 5px 60px rgba(0, 0, 0, 0.19), 0px 1.5px 1.5px rgba(0, 0, 0, 0.23);
   }
@@ -217,45 +227,68 @@ header {
 #container_skill{
     display: flex;
     justify-content: center;
-    width: 90vw;
-    min-width: 1400px;
     margin: auto;
   }
   .skill-card {
+    flex: 0 0 auto;
     z-index: 1;
     margin: 20px;
-    width: 25%;
-    min-width: 243px;
+    width: 300px;
     background-color: #FFF;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     cursor: pointer;
   }
-  
+  #Skill-Web .skill-card__icon{
+    background: url("../picture/Web.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #Skill-OOP .skill-card__icon{
+    background: url("../picture/OOP.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #Skill-DB .skill-card__icon{
+    background: url("../picture/DB.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #Skill-Com .skill-card__icon{
+    background: url("../picture/communication.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #Skill-Lang .skill-card__icon{
+    background: url("../picture/langue.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
   h2{
     margin:0px;
   }
   .skill-card:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
-  .skill-card:hover .skill-card__header {
-    height: 40px;
-  }
+
   
   .skill-card .skill-card__body .skill-card__star{
-    line-height: 10vh;
     text-align: center;
     font-size: 150%;
-    margin:auto;
-    margin-top:5%;
+    position: absolute;
+    bottom:0;
+    margin: auto;
+    width: 100%;
     color: orange;
   }
-  .skill-card:hover .skill-card__body {
-    height: 170px;
-  }
-  
   .skill-card .skill-card__header {
     position: relative;
-    height: 170px;
+    height: 115px;
     transition: height 0.5s;
     overflow: hidden;
   }
@@ -266,8 +299,8 @@ header {
     -webkit-transform: translateY(-50%) translateX(-50%);
             transform: translateY(-50%) translateX(-50%);
 
-    width: 128px;
-    height: 128px;
+    width: 256px;
+    height: 200px;
     transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
     transition: transform 0.5s, -webkit-transform 0.5s;
@@ -286,10 +319,11 @@ header {
     transition: transform 0.5s, -webkit-transform 0.5s;
   }
   .skill-card .skill-card__body {
-    height: 3em;
+    height: 115px;
     margin: 20px;
     transition: height 0.5s;
     overflow: hidden;
+    position: relative;
   }
   .skill-card .skill-card__body .skill-card__title {
     font-size: 1.4em;
@@ -338,10 +372,10 @@ header {
   #projects h1 {
     margin-top: 25px;
     text-align: center;
-    font-size: 55px;
+    font-size: 2em;
     color: #222;
     text-shadow: 8px 15px 20px rgba(0, 0, 0, 0.19), 4px 6px 10px rgba(0, 0, 0, 0.23);
-    margin-bottom: 50px;
+    margin-bottom: 5vh;
   }
   #projects #project-container {
     display: flex;
@@ -448,16 +482,19 @@ header {
   }
   #project-details #project-name a{
     color: #222;;
-    font-size: 35px;
+    font-size: 2.5vh;
+  }
+  #project-details #project-name a:hover{
+    color: White;
   }
   #project-details #project-subname {
     font-style: italic;
-    font-size: 16px;
+    font-size: 1.8vh;
   }
   #project-details #project-description {
     margin-top: 15px;
     text-align: center;
-    font-size: 18px;
+    font-size: 2vh;
   }
   #project-details #project-description #battle-drive-link {
     font-weight: bold;
@@ -547,10 +584,10 @@ header {
   #education h1 {
     margin-top: 25px;
     text-align: center;
-    font-size: 55px;
+    font-size: 2em;
     color: #222;
     text-shadow: 8px 15px 20px rgba(0, 0, 0, 0.19), 4px 6px 10px rgba(0, 0, 0, 0.23);
-    margin-bottom: 50px;
+    margin-bottom: 5vh;
   }
   .row:before,
   .row:after {
@@ -602,7 +639,7 @@ header {
   }
   
   .timeline li {
-      padding: 2em 0;
+      padding: 2vh 0;
   }
   
   .timeline .hexa{

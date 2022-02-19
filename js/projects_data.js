@@ -1,4 +1,14 @@
 let projectsData = {
+     "HellMansion": {
+        "name": "Hell-Mansion",
+        "url": "https://github.com/MrYonaxx/Hell-Mansion.git",
+        "subname": "University project (2021)",
+        "description": "The Moonstone Kingdom turns out to be a isometric rogueLike game. " + 
+            "In Hell's Mansion, the player takes on the role of a mother whose child has just been kidnapped." +
+            "After chasing the perpetrator, she finds herself in an abandoned mansion where she meets a mysterious " + 
+            "being who contacts her via radio/TV.",
+        "technos": ["Unity", "C++"],
+    },
     "moonstone": {
         "name": "Moonstone Kingdom",
         "url": "https://github.com/Adarshmihir/Moonstone.git",

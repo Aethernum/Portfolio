@@ -1,7 +1,7 @@
 let projectsData = {
       "Urubu": {
         "name": "Urubu",
-        "url": "Steam",
+        "url": "https://store.steampowered.com/app/1939290/URUBU/?beta=0",
         "subname": "Concours Ubisoft (2022)",
         "description": "Are you ready to join the Urubu ranks ?" +
             "Urubu is a co-op, payload with a grain of RPG and Management. You play as recruits" + 

@@ -1,4 +1,14 @@
 let projectsData = {
+      "Urubu": {
+        "name": "Urubu",
+        "url": "Steam",
+        "subname": "Concours Ubisoft (2022)",
+        "description": "Are you ready to join the Urubu ranks ?" +
+            "Urubu is a co-op, payload with a grain of RPG and Management. You play as recruits" + 
+            "from the last division in their final test to join the ranks of Urubu" + 
+            "Actualy private on Steam, so send me mail or Dm on facebook if you want CDkey",
+        "technos": ["Unreal", "C++"],
+    },
      "HellMansion": {
         "name": "Hell-Mansion",
         "url": "https://github.com/MrYonaxx/Hell-Mansion.git",
@@ -7,7 +17,7 @@ let projectsData = {
             "In Hell's Mansion, the player takes on the role of a mother whose child has just been kidnapped." +
             "After chasing the perpetrator, she finds herself in an abandoned mansion where she meets a mysterious " + 
             "being who contacts her via radio/TV.",
-        "technos": ["Unity", "C++"],
+        "technos": ["Unity", "C#"],
     },
     "moonstone": {
         "name": "Moonstone Kingdom",
@@ -17,7 +27,7 @@ let projectsData = {
             "It is part of a dynamic of main and secondary quests in which the player evolves at the same time as his world." +
             "Alongside the RPG combat mechanics and the quests given by the NPCs, the game also offers a city management " + 
             "dimension via the improvement and repair of an initially ravaged village.",
-        "technos": ["Unity", "C++"],
+        "technos": ["Unity", "C#"],
     },
     "gladiaball": {
         "name": "Gladiaball",
@@ -28,7 +38,7 @@ let projectsData = {
             "The player is alone and carries a weapon similar to a baseball bat. The main character, must hit a ball in order " + 
             "to defeat the deity because it is only sensitive to the ball of destiny. At the end of the first round, the hero moves " + 
             "on to the next stage in order to defeat each deity and regain his freedom - all this in front of a crowd of spectators thirsty for blood and fighting.",
-        "technos": ["Unreal Engine", "C#", "BluePrint"],
+        "technos": ["Unreal Engine", "C++", "BluePrint"],
     },
     "blowbug": {
         "name": "Blow The Bug",
@@ -49,7 +59,7 @@ let projectsData = {
             "the imposed theme was \"frenzy\", we decided to create an arena in which a berserker has to exterminate hordes of enemies," +
             "at each of his attacks he increases his frenzy, which allows him to passively increase his life steal. " +
             "However, if his frenzy exceeds a critical threshold, he starts bleeding, which causes him to lose life points over time.",
-        "technos": ["Unreal Engine", "C#", "BluePrint"],
+        "technos": ["Unreal Engine", "C++", "BluePrint"],
     },
     "portfolio": {
         "name": "My portfolio",

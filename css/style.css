@@ -434,7 +434,16 @@ header {
     height: 300px;
     background-color: transparent;
   }
-  
+  #urubu {
+    background: url("../picture/Urubu.png");
+    background-size: cover;
+    background-position: center;
+  }
+  #hellmansion {
+    background: url("../picture/HellMansion.png");
+    background-size: cover;
+    background-position: center;
+  }
   #moonstone {
     background: url("../picture/Moonstone.png");
     background-size: cover;

@@ -1,5 +1,5 @@
 let projectsData = {
-      "Urubu": {
+      "urubu": {
         "name": "Urubu",
         "url": "https://store.steampowered.com/app/1939290/URUBU/?beta=0",
         "subname": "Concours Ubisoft (2022)",
@@ -9,7 +9,7 @@ let projectsData = {
             "Actualy private on Steam, so send me mail or Dm on facebook if you want CDkey",
         "technos": ["Unreal", "C++"],
     },
-     "HellMansion": {
+     "hellmansion": {
         "name": "Hell-Mansion",
         "url": "https://github.com/MrYonaxx/Hell-Mansion.git",
         "subname": "University project (2021)",

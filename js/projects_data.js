@@ -4,8 +4,8 @@ let projectsData = {
         "url": "https://store.steampowered.com/app/1939290/URUBU/?beta=0",
         "subname": "Special Prize Winner, Concours Ubisoft (2022)",
         "description": "Are you ready to join the Urubu ranks ?" +
-            "Urubu is a co-op, payload with a grain of RPG and Management. You play as recruits" + 
-            "from the last division in their final test to join the ranks of Urubu" + 
+            "Urubu is a co-op, payload with a grain of RPG and Management. You play as recruits " + 
+            "from the last division in their final test to join the ranks of Urubu " + 
             "Actualy available on Steam",
         "technos": ["Unreal", "C++"],
     },
